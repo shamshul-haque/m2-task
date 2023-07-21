@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image and content layout</title>
+    <style>
+      .container {
+        border: 2px solid red;
+      }
+      .container-1 {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .img {
+        width: 40%;
+      }
+      .img img {
+        width: 100%;
+      }
+      .content {
+        width: 60%;
+      }
+      .container-2 {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      @media screen and (max-width: 576px) {
+        .container-1 {
+          flex-direction: column;
+          gap: 0;
+        }
+        .img, .content{
+            width: 100%;
+        }
+        .container-2 {
+          flex-direction: column-reverse;
+          gap: 0;
+          margin-top: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-1">
+        <div class="img">
+          <img src="image/A.jpg" alt="A" />
+        </div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            praesentium obcaecati sit. Nobis incidunt ducimus perspiciatis sed
+            assumenda temporibus eligendi molestiae aspernatur dolorem at
+            explicabo nam iure velit, recusandae officiis et eum laborum sit
+            quidem rerum modi ratione cupiditate veritatis? Architecto
+            aspernatur ex at ipsa in porro quasi error nisi.
+          </p>
+        </div>
+      </div>
+      <div class="container-2">
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            praesentium obcaecati sit. Nobis incidunt ducimus perspiciatis sed
+            assumenda temporibus eligendi molestiae aspernatur dolorem at
+            explicabo nam iure velit, recusandae officiis et eum laborum sit
+            quidem rerum modi ratione cupiditate veritatis? Architecto
+            aspernatur ex at ipsa in porro quasi error nisi.
+          </p>
+        </div>
+        <div class="img">
+          <img src="image/B.jpg" alt="B" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
